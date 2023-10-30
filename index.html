@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    overflow: hidden;
+    margin: 0;
+    background-color: #87CEEB;
+  }
+
+  .flower {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #FF69B4;
+    border-radius: 50%;
+    animation: float 4s linear infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, -100px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  #sayang {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+  }
+</style>
+</head>
+<body>
+<div class="flower"></div>
+<div id="sayang">SAYANG ALIN BANYAK BANYAK</div>
+
+<script>
+  const flower = document.querySelector('.flower');
+  const sayang = document.getElementById('sayang');
+
+  flower.addEventListener('click', () => {
+    sayang.style.display = 'block';
+  });
+</script>
+</body>
+</html>
